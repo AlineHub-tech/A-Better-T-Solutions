@@ -1,0 +1,43 @@
+body{margin:0;font-family:Arial;background:#f8fafc}
+
+.navbar{display:flex;justify-content:space-between;align-items:center;
+padding:15px 30px;background:#0f172a;color:white; position: sticky;
+   top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);}
+.logo{display:flex;align-items:center}
+.logo img{height:40px;margin-right:10px;border-radius:50%;}
+.navbar a{color:#22c55e;margin-left:15px;text-decoration:none}
+
+.hero{text-align:center;padding:90px 20px;background:#020617;color:white}
+.animate{color:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+.hero-btn{margin-top:20px;display:inline-block;background:#22c55e;
+color:white;padding:14px 30px;border-radius:30px;text-decoration:none}
+
+.service-section{padding:60px 30px}
+.service-section h2{text-align:center;color:#0f172a}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;margin-top:30px}
+
+.card{background:white;border-radius:16px;padding:16px;
+box-shadow:0 15px 30px rgba(0, 0, 0, 0.5);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;border-radius:12px}
+
+.price{color:red;font-weight:bold}
+.btn{display:block;margin-top:10px;background:#16a34a;
+color:white;padding:10px;text-align:center;border-radius:8px;text-decoration:none}
+
+.about,.contact{text-align:center;padding:70px 20px}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px}
+
+iframe{width:100%;height:300px;border:none}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#023615;
+color:white;padding:13px;border-radius:50%;font-size:20px}
+
+.footer{text-align:center;background:#0f172a;color:white;padding:30px}
+.footer i{margin:0 10px;font-size:20px;color:#22c55e}
