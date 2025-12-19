@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import profile from "../assets/profile.png";
 import "../sty.css";
 export default function About() {
   return (
@@ -33,7 +34,7 @@ export default function About() {
         </div>
 
         <div className="about-image">
-          <img src="https://source.unsplash.com/600x450/?creative,agency" />
+          <img src={profile} />
         </div>
       </section>
 

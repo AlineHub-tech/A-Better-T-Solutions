@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import services from "../Data";
+import services from "../data/Data";
 
 export default function Home(){
   const texts = [
