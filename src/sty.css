@@ -54,6 +54,9 @@
   font-size: 2.2rem;
   margin-bottom: 15px;
 }
+.about-image img{
+width:70%;
+}
 
 .about-text p {
   line-height: 1.7;

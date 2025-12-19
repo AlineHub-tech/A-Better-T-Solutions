@@ -25,7 +25,6 @@ gap:25px;margin-top:30px}
 box-shadow:0 15px 30px rgba(0, 0, 0, 0.5);transition:.3s}
 .card:hover{transform:translateY(-8px)}
 .card img{width:100%;border-radius:12px}
-
 .price{color:red;font-weight:bold}
 .btn{display:block;margin-top:10px;background:#16a34a;
 color:white;padding:10px;text-align:center;border-radius:8px;text-decoration:none}
@@ -41,3 +40,16 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
 
 .footer{text-align:center;background:#0f172a;color:white;padding:30px}
 .footer i{margin:0 10px;font-size:20px;color:#22c55e}
+
+@media (max-width: 768px) {
+  .card img {
+    height: 380px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .card img {
+    height: 280px;
+  }
+}
