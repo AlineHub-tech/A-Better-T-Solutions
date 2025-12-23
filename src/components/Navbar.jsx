@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 
 export default function Navbar(){
   return(
     <nav className="navbar">
       <div className="logo">
-        <img src={logo} alt="logo"/>
+        <img src={Logo} alt="logo"/>
         <span>A Better-T Solutions</span>
       </div>
       <div>
@@ -15,4 +15,5 @@ export default function Navbar(){
       </div>
     </nav>
   );
+
 }
