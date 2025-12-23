@@ -6,7 +6,7 @@ padding:15px 30px;background:#0f172a;color:white; position: sticky;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);}
 .logo{display:flex;align-items:center}
-.logo img{height:40px; width:40%;margin-right:10px;border-radius:50%;}
+.logo img{height:40px; width:30%;margin-right:10px;border-radius:50%;}
 .navbar a{color:#22c55e;margin-left:15px;text-decoration:none}
 
 .hero{text-align:center;padding:90px 20px;background:#020617;color:white}
@@ -54,3 +54,4 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
   }
 
 }
+
