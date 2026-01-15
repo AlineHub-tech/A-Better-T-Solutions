@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo.jpg";
 
 export default function Navbar(){
   return(
@@ -17,3 +17,4 @@ export default function Navbar(){
   );
 
 }
+

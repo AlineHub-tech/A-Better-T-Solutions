@@ -4,7 +4,7 @@ export default function Footer(){
       <div className="socials">
         <a href="https://www.facebook.com/share/15erRQdApJ/">
         <i className="fab fa-facebook"></i></a>
-         <a href="https://www.instagram.com/a_li_ne97?igsh=dGs5MXVnbnpsbzIz">
+         <a href="https://www.instagram.com/better_t_solutions?igsh=cDR5aHVnbXhjY2dp">
         <i className="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/umugwaneza-aline-655146325">
         <i className="fab fa-linkedin"></i></a>
@@ -14,4 +14,5 @@ export default function Footer(){
       <p>© 2025 A Better-T Solutions. All Rights Reserved.</p>
     </footer>
   );
+
 }
