@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
-import "../Styles/Footer.css"; 
+import "../Styles.css"; 
 
 export default function Footer(){
   const currentYear = new Date().getFullYear();
@@ -64,3 +64,4 @@ export default function Footer(){
     </footer>
   );
 }
+
