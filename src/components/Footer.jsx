@@ -43,7 +43,6 @@ export default function Footer(){
           <p><i className="fas fa-envelope"></i> abettertomorrowf@gmail.com</p>
           <p><i className="fas fa-clock"></i> Mon-Sat: 8am - 9pm</p>
         </div>
-
         <div className="footer-column">
           <h3>Newsletter</h3>
           <p>Subscribe to our newsletter to get the latest updates and offers.</p>
@@ -66,6 +65,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
