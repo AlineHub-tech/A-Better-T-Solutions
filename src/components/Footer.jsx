@@ -37,7 +37,7 @@ export default function Footer(){
           </ul>
         </div>
 
-        {/* Contact Us */}
+
         <div className="footer-column">
           <h3>Contact Us</h3>
           <p><i className="fas fa-map-marker-alt"></i>Kigali, Rwanda (Batsinda)</p>
@@ -69,6 +69,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
