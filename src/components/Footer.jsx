@@ -28,7 +28,6 @@ export default function Footer(){
           </div>
         </div>
 
-
         <div className="footer-column">
           <h3>Quick Links</h3>
           <ul>
@@ -71,6 +70,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
