@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Assuming you use React Router
+import { Link } from "react-router-dom";
 import "../styles.css";
 
 export default function Footer(){
@@ -74,3 +74,4 @@ export default function Footer(){
     </footer>
   );
 }
+
