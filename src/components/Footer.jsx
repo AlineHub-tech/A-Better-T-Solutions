@@ -53,7 +53,7 @@ export default function Footer(){
         </div>
       </div>
 
-      {/* Footer Bottom / Copyright */}
+
       <div className="footer-bottom">
         <p>&copy; {currentYear} A Better-T Solutions. All Rights Reserved.</p>
         {/* Add privacy and terms links here */}
@@ -65,6 +65,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
