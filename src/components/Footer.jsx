@@ -54,7 +54,7 @@ export default function Footer(){
       </div>
       <div className="footer-bottom">
         <p>&copy; {currentYear} A Better-T Solutions. All Rights Reserved.</p>
-        {/* Add privacy and terms links here */}
+
         <div className="footer-legal">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -63,6 +63,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
