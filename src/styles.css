@@ -1,62 +1,209 @@
-body{margin:0;font-family:Arial;background:#f8fafc}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4; 
+    color: #333;
+}
 
-.navbar{display:flex;justify-content:space-between;align-items:center;
-padding:15px 30px;background:#0f172a;color:white; position: sticky;
-   top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);}
-.logo{display:flex;align-items:center}
-.logo img{height:40px; width:30%;margin-right:10px;border-radius:50%;}
-.navbar a{color:#22c55e;margin-left:15px;text-decoration:none}
+/* --- Navbar Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #020617; /* Dark blue/black background */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.479);
+}
 
-.hero{text-align:center;padding:90px 20px;background:#020617;color:white}
-.animate{color:#22c55e;animation:pulse 2s infinite}
-@keyframes pulse{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
-.hero-btn{margin-top:20px;display:inline-block;background:#22c55e;
-color:white;padding:14px 30px;border-radius:30px;text-decoration:none}
+.logo {
+    display: flex;
+    align-items: center;
+    color:#22c55e; /* Logo text color Emerald Green */
+}
 
-.service-section{padding:60px 30px}
-.service-section h2{text-align:center;color:#0f172a}
+.logo img{
+    height: 40px; /* Size nziza ya logo */
+    width: 40px; 
+    margin-right: 10px;
+    border-radius: 50%; /* Ituma iba uruziga */
+    object-fit: cover; /* Ituma ishusho iringana neza muri uruziga */
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;margin-top:30px}
+.navbar a {
+    color:#22c55e; /* Links color Emerald Green */
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-.card{background:white;border-radius:16px;padding:16px;
-box-shadow:0 15px 30px rgba(0, 0, 0, 0.5);transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.card img{width:100%;border-radius:12px}
-.price{color:red;font-weight:bold}
-.btn{display:block;margin-top:10px;background:#16a34a;
-color:white;padding:10px;text-align:center;border-radius:8px;text-decoration:none}
+.navbar a:hover {
+    color: #fff; /* White on hover */
+}
 
-.about,.contact{text-align:center;padding:70px 20px}
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px}
+/* --- Hero Section Styles --- */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: #020617; /* Dark blue background */
+    color: white;
+}
 
-iframe{width:100%;height:300px;border:none}
+.animate {
+    color: #22c55e; /* Animation color Emerald Green */
+    animation: pulse 2s infinite;
+}
 
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#023615;
-color:white;padding:13px;border-radius:50%;font-size:20px}
+@keyframes pulse {
+    0% { opacity: .5; } 
+    50% { opacity: 1; }
+    100% { opacity: .5; }
+}
+
+.hero-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #22c55e; /* Button background Emerald Green */
+    color: #020617; /* Text color dark to contrast */
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #065F46;  /* Darker green on hover */
+    color: white;
+}
+
+/* --- Service Section & Cards Styles --- */
+.service-section {
+    padding: 60px 30px;
+}
+
+.service-section h2 {
+    text-align: center;
+    color: #020617;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16/9; 
+    border-radius: 12px;
+    object-fit: cover; 
+}
+
+/* Text color muri card */
+.card h3 {
+    color: #22c55e; /* Emerald Green text color */
+}
+
+.price {
+    color: #c9302b; /* Red for prices */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn {
+    display: block;
+    margin-top: 15px;
+    background:#22c55e; /* Button color Emerald Green */
+    color: #020617;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #22c55e;
+    color: white;
+}
+
+/* --- About & Contact Styles --- */
+.about, .contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* --- WhatsApp Float Button --- */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #22c55e; /* Classic Green for WhatsApp */
+    color: white;
+    padding: 15px; 
+    border-radius: 50%;
+    font-size: 24px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+
 @media (max-width: 768px) {
-  .card img {
-    height: 380px;
-  }
-
+    .navbar {
+        padding: 15px 20px;
+    }
+    .hero {
+        padding: 60px 10px;
+    }
+    .service-section, .about, .contact {
+        padding: 40px 15px;
+    }
 }
 
-@media (max-width: 480px) {
-  .card img {
-    height: 280px;
-  }
-
-}
-/*footer  */
-/* --- FOOTER STYLES --- */
+/* --- FOOTER STYLES (GREEN PALETTE & RESPONSIVE) --- */
 .site-footer {
-  background-color: #001f3f; /* Deep blue/navy color */
+  background-color: #020617; /* Dark blue/black background */
   color: white;
-  padding-top: 60px;
-  border-top: 5px solid #007bff; /* Primary color accent line */
+  padding: 60px 5%; 
+  border-top: 5px solid #22c55e; /* Green Accent Line */
 }
 
 .footer-content {
@@ -67,9 +214,9 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
 }
 
 .footer-column h3 {
-  color: #ffeb3b; /* Accent color for titles */
+  color:#22c55e; /* Accent color for titles (Green) */
   margin-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
   padding-bottom: 10px;
 }
 
@@ -81,26 +228,27 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
 
 .footer-column p i {
     margin-right: 10px;
-    color: #007bff;
+    color: #22c55e; /* Icons color Green */
 }
 
 /* Social Icons */
 .socials a {
   color: white;
-  font-size: 1.2rem;
-  margin-right: 15px;
+  font-size: 1.4rem; 
+  margin-right: 20px;
   margin-top: 15px;
   display: inline-block;
   transition: color 0.3s;
 }
 
 .socials a:hover {
-  color: #007bff;
+  color:#22c55e; /* Green on hover */
 }
 
 /* Quick Links List */
 .footer-column ul {
   list-style: none;
+  padding: 0; 
 }
 
 .footer-column ul li a {
@@ -113,7 +261,7 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
 }
 
 .footer-column ul li a:hover {
-  color: #007bff;
+  color: #22c55e; /* Green on hover */
   text-decoration: underline;
 }
 
@@ -125,6 +273,8 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
   border: none;
   margin-bottom: 10px;
   font-family: inherit;
+  background-color: #333; 
+  color: white;
 }
 
 .newsletter-form button {
@@ -132,22 +282,24 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #007bff;
-  color: white;
+  background-color:#22c55e; /* Green Button */
+  color: #020617; /* Dark text */
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .newsletter-form button:hover {
-  background-color: #0056b3;
+  background-color: #065F46; /* Darker Green on hover */
+  color: white;
 }
+
 .footer-bottom {
-  background-color: #001429; 
+  background-color: #000000; /* Pure black for bottom part */
   padding: 20px 5%;
   text-align: center;
   font-size: 0.8rem;
-  border-top: 1px solid #001f3f;
+  border-top: 1px solid #020617;
 }
 
 .footer-bottom p {
@@ -155,7 +307,7 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
 }
 
 .footer-legal a {
-    color: #007bff;
+    color:#22c55e; /* Green links */
     margin: 0 10px;
     text-decoration: none;
 }
@@ -164,24 +316,15 @@ color:white;padding:13px;border-radius:50%;font-size:20px}
     text-decoration: underline;
 }
 
+/* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  
   .footer-column h3 {
       text-align: center;
-      border-bottom: none;
-  }
-  .socials {
-      margin-bottom: 20px;
-  }
-  .footer-column p i {
-      margin-right: 0;
-      display: block;
-      font-size: 1.5rem;
-      margin-bottom: 5px;
+      border-bottom: none; 
   }
 }
-
-

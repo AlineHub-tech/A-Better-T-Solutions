@@ -55,7 +55,9 @@
   margin-bottom: 15px;
 }
 .about-image img{
-width:70%;
+width:35%;
+height: 198px;
+border-radius: 50%;
 }
 
 .about-text p {
@@ -191,7 +193,32 @@ width:70%;
   text-decoration: none;
   transition: .3s;
 }
+.founder-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0; 
+}
 
+.founder-info h3 {
+    color: #0070F3; /* Blue color */
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.founder-info p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.founder-info a {
+    color: #22c55e; /* Green accent color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.founder-info a:hover {
+    text-decoration: underline;
+}
 .cta-btn:hover {
   transform: scale(1.08);
 }
@@ -279,4 +306,117 @@ width:70%;
     grid-template-columns: 1fr;
     text-align: center;
   }
+}
+/* --- Service Detail Page Styles --- */
+
+.service-detail-page {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px; /* Optional: Constrain image height */
+}
+
+.detail-content {
+  flex: 2;
+}
+
+.detail-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0056b3; /* Use your brand color */
+}
+
+.detail-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #28a745; /* Use a color for price */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-description h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.detail-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.detail-contact {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.detail-contact p {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #25d366; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #128c7e;
+}
+
+
+@media (min-width: 768px) {
+  .detail-container {
+    flex-direction: row;
+    padding: 40px;
+  }
+}
+
+.loading-page {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.service-card-link {
+    text-decoration: none; 
+    color: inherit;
+}
+.card-link{
+   text-decoration: none;
 }
