@@ -8,7 +8,6 @@ export default function Footer(){
     <footer className="site-footer">
       <div className="content-section footer-content">
         
-
         <div className="footer-column">
           <h3>A Better-T Solutions</h3>
           <p>
@@ -73,6 +72,7 @@ export default function Footer(){
     </footer>
   );
 }
+
 
 
 
