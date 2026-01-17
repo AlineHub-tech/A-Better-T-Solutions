@@ -24,7 +24,7 @@ export default function About() {
           <p>
             A Better-T Solutions is a Kigali-based creative agency specializing
             in Graphic Design, Web Development, ICT Solutions, Microsoft Office
-            services and Professional Photography.
+            services and Professional Photography.We also offer comprehensive Cyber Cafe services.
           </p>
           <p>
             We focus on delivering high-quality, modern and impactful digital
@@ -35,6 +35,15 @@ export default function About() {
 
         <div className="about-image">
           <img src={profile} />
+          <div className="founder-info">
+            <h3>Founder: Umugwaneza Aline</h3>
+            <p>
+              Email: 
+              <a href="mailto:umugwanezaaline@77gmail.com"> 
+                umugwanezaaline@77gmail.com
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -111,6 +120,8 @@ export default function About() {
           <div><i className="fas fa-file-word"></i> Microsoft Office</div>
           <div><i className="fas fa-print"></i> Printing Services</div>
           <div><i className="fas fa-chart-line"></i> ICT Solutions</div>
+          <div><i className="fas fa-computer"></i> Cyber Cafe Services</div> 
+          <div><i className="fas fa-id-card"></i> NIDA Services (IDs)</div> 
         </div>
       </section>
 

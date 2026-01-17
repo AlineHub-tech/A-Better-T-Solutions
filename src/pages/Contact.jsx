@@ -33,13 +33,13 @@ export default function Contact() {
         <div className="info-card">
           <i className="fas fa-location-dot"></i>
           <h3>Location</h3>
-          <p>Kigali, Rwanda</p>
+          <p>Batsinda,Kigali, Rwanda</p>
         </div>
 
         <div className="info-card">
           <i className="fas fa-clock"></i>
           <h3>Working Hours</h3>
-          <p>Mon – Sat | 8:00 AM – 6:00 PM</p>
+          <p>Mon – Sat | 8:30 AM – 9:00 PM</p>
         </div>
       </section>
 
@@ -61,7 +61,7 @@ export default function Contact() {
         <h2>Our Location</h2>
         <iframe
           title="map"
-          src="https://www.google.com/maps?q=Kagugu,+Kigali,+Rwanda&output=embed"
+          src="https://www.google.com/maps?q=Batsinda,+Kigali,+Rwanda&output=embed"
         ></iframe>
       </section>
 
