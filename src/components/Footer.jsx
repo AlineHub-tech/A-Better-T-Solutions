@@ -4,7 +4,6 @@ import "../styles.css";
 
 export default function Footer(){
   const currentYear = new Date().getFullYear();
-
   return(
     <footer className="site-footer">
       <div className="content-section footer-content">
@@ -74,4 +73,5 @@ export default function Footer(){
     </footer>
   );
 }
+
 
