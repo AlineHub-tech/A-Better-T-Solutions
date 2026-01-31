@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // Don't forget to import Link from react-router-dom!
 import { Link } from 'react-router-dom'; 
 import services from "../data/Data";
-
+import "../styles/Home.css"
 export default function Home(){
   const texts = [
     "Graphic Design",
@@ -14,7 +14,7 @@ export default function Home(){
     "Creative Flyers",
     "Modern Logos",
     "ICT Services",
-    "Photography", // Added missing comma here
+    "Photography", 
     "Cyber cofe internet"
   ];
 
@@ -49,9 +49,7 @@ export default function Home(){
 
           <div className="grid">
             {group.items.map((item,j)=>(
-              // >>>>> TWAKUYEMO DIV TUGARURA LINK KUGIRA NGO IHUZE NA ROUTER <<<<<
-              // Buri kadirishya kose ubu karakandwa:
-              <Link 
+                <Link 
                 to={`/services/${encodeURIComponent(item.title)}`} 
                 className="card-link" 
                 key={j}
@@ -60,8 +58,7 @@ export default function Home(){
                     <img src={item.img} alt={item.title}/>
                     <h3>{item.title}</h3>
                     <p className="price">{item.price}</p>
-                    {/* Twashyize buto muri Link, ubu yakora neza */}
-                    <button className="btn">
+                     <button className="btn">
                       View Details
                     </button>
                 </div>
