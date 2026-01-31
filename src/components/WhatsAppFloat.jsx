@@ -1,3 +1,4 @@
+import "../styles/WhatsAppFloat.css"
 export default function WhatsAppFloat(){
   return(
     <a className="whatsapp" href="https://wa.me/250796023452">

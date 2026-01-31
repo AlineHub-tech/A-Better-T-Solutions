@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Assuming you use React Router
-import "../styles.css";
+import "../styles/Footer.css";
 
 export default function Footer(){
   const currentYear = new Date().getFullYear();
@@ -64,7 +64,7 @@ export default function Footer(){
 
       {/* Footer Bottom / Copyright */}
       <div className="footer-bottom">
-<p class="footer-text">&copy; {currentYear} A Better-T Solutions. All Rights Reserved. | Developed by <a href="https://aline-site-seven.vercel.app/"><span class="developer-name">Umugwaneza Aline</span></a></p>
+<p className="footer-text">&copy; {currentYear} A Better-T Solutions. All Rights Reserved. | Developed by <a href="https://aline-site-seven.vercel.app/"><span class="developer-name">Umugwaneza Aline</span></a></p>
         {/* Add privacy and terms links here */}
         <div className="footer-legal">
             <a href="#">Privacy Policy</a>
