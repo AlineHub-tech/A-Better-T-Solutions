@@ -1,0 +1,162 @@
+/* --- Global & Reset Styles (Good starting point) --- */
+:root {
+    --primary-color: #0f172a;  /* Blue */
+    --accent-color: #28a745;  /* Green */
+    --text-color: #22c55e;;
+    --bg-light: #f8f9fa;
+    --card-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Hero Section Styling --- */
+.hero {
+    background:#0f172a; ;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Dynamic text animation (The 'animate' class in your JS) */
+.animate {
+    color: #22c55e; /* Bright accent for the changing text */
+    transition: color 0.5s ease-in-out;
+    display: inline-block;
+    min-width: 250px; /* Prevents layout shift during text change */
+}
+
+
+/* --- Service Sections --- */
+.service-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.service-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color:#22c55e ;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service-section h2 i {
+    margin-right: 15px;
+    color:#0a8336;
+}
+
+/* --- Grid Layout --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card Styling --- */
+.card-link {
+    text-decoration: none;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 15px 20px 5px;
+    color: var(--text-color);
+}
+
+.card p.price {
+    margin: 0 20px 15px;
+    font-weight: bolder;
+    color: rgba(182, 15, 15, 0.651);
+    font-size: 1.1rem;
+}
+
+.card .btn {
+    background-color: #22c55e;
+    color: white;
+    padding: 10px;
+    border:1px solid #22c55e;
+    width: calc(100% - 40px); /* accounts for margin/padding */
+    margin: 0 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}

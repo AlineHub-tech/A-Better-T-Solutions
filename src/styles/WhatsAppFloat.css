@@ -1,0 +1,35 @@
+/* --- WHATSAPP FLOATING BUTTON STYLES --- */
+.whatsapp {
+  position: fixed; /* Stays in the same place even when scrolling */
+  bottom: 20px;    /* 20px from the bottom of the screen */
+  right: 20px;     /* 20px from the right of the screen */
+  width: 60px;     /* Size of the button */
+  height: 60px;
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  border-radius: 50%; /* Makes it a perfect circle */
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensures it is on top of other content */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp:hover {
+  background-color: #128c7e; /* Slightly darker green on hover */
+  transform: scale(1.1); /* Jumps slightly when hovered */
+}
+
+/* Optional: Add a subtle pulsating animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp {
+    animation: pulse 2s infinite;
+}

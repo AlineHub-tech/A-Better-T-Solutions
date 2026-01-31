@@ -1,0 +1,148 @@
+.site-footer {
+  background-color: #020617; /* Dark blue/black background */
+  color: white;
+  padding: 60px 5%; 
+  border-top: 5px solid #22c55e; /* Green Accent Line */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-column h3 {
+  color:#22c55e; /* Accent color for titles (Green) */
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  padding-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-column p i {
+    margin-right: 10px;
+    color: #22c55e; /* Icons color Green */
+}
+
+/* Social Icons */
+.socials a {
+  color: white;
+  font-size: 1.4rem; 
+  margin-right: 20px;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color:#22c55e; /* Green on hover */
+}
+
+/* Quick Links List */
+.footer-column ul {
+  list-style: none;
+  padding: 0; 
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #22c55e; /* Green on hover */
+  text-decoration: underline;
+}
+
+/* Newsletter Form */
+.newsletter-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-family: inherit;
+  background-color: #333; 
+  color: white;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color:#22c55e; /* Green Button */
+  color: #020617; /* Dark text */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #065F46; /* Darker Green on hover */
+  color: white;
+}
+
+.footer-bottom {
+  background-color: #000000; /* Pure black for bottom part */
+  padding: 20px 5%;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #020617;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+}
+
+.footer-legal a {
+    color:#22c55e; /* Green links */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-column h3 {
+      text-align: center;
+      border-bottom: none; 
+  }
+}
+.footer-text .developer-name a {
+    font-weight: bold; /* Makes the name bold */
+    color: #FF5733;   /* Sets a nice, visible blue color */
+    /* You can choose any color you like, e.g.,  (orange),  (green) */
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.footer-text .developer-name:hover {
+    color: #ffffff; 
+    text-decoration:none;
+}
+a{
+text-decoration:none;
+color: #ff380b; 
+font-weight:bolder;
+font-family:sans-serif;
+}
+

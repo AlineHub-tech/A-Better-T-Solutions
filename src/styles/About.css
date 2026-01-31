@@ -1,0 +1,136 @@
+/* General Resets and Base Styles (Dark Blue Theme) */
+:root {
+  --dark-blue: #020617; /* Main background color */
+  --card-bg: #0f172a;   /* Color for cards/boxes */
+  --accent-teal:#22c55e; /* Vibrant Teal Accent Color */
+  --text-light: #f8fafc; /* Light text color */
+  --text-gray: #94a3b8; /* Subtle gray text */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+section { padding: 80px 5%; }
+h1, h2, h3, h4 { color: var(--text-light); }
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--accent-teal);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover { background-color: #00897b; transform: scale(1.05); }
+
+
+/* HERO */
+.about-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #1e293b 0%, var(--dark-blue) 100%);
+  border-bottom: 1px solid #1e293b;
+}
+
+.hero-badge {
+  color: var(--accent-teal);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.about-hero h1 { font-size: 3rem; margin: 0 auto 20px; }
+.about-hero h1 span { color: var(--accent-teal); }
+.about-hero p { color: var(--text-gray); max-width: 600px; margin: 0 auto; }
+
+
+/* WHO WE ARE / WHAT DRIVES US */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--dark-blue);
+}
+
+.about-text { flex: 1; }
+.about-text h2 { margin-bottom: 20px; }
+.about-text p { color: var(--text-gray); margin-bottom: 15px; }
+
+.about-image { flex: 1; text-align: center; }
+.about-image img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+.founder-info { margin-top: 15px; }
+.founder-info a { color: var(--accent-teal); text-decoration: underline; }
+
+/* BUILT ON PURPOSE (VISION MISSION) */
+.vision-mission {
+    background-color: var(--card-bg);
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+}
+.vision-mission h2 { text-align: center; margin-bottom: 40px; }
+.vm-grid { display: flex; gap: 30px; justify-content: center; }
+.vm-card { background: var(--dark-blue); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid var(--card-bg); }
+.vm-icon { font-size: 2.5rem; color: var(--accent-teal); margin-bottom: 15px; }
+
+
+/* WHY CHOOSE US */
+.why-us { background-color: var(--dark-blue); }
+.why-us h2 { text-align: center; margin-bottom: 40px; }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.why-card { background: var(--card-bg); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid var(--card-bg); }
+.why-icon { font-size: 2rem; color: var(--accent-teal); margin-bottom: 15px; }
+
+
+/* PROCESS (Removed for brevity, kept other requested sections) */
+
+
+/* OUR EXPERTISE (SERVICES SUMMARY) */
+.about-services { background-color: var(--card-bg); }
+.about-services h2 { text-align: center; margin-bottom: 40px; }
+.about-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.about-service-grid div {
+  background: var(--dark-blue);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--dark-blue);
+}
+.about-service-grid div:hover { border-color: var(--accent-teal); }
+
+
+/* CTA */
+.about-cta {
+  background-color: var(--dark-blue);
+  text-align: center;
+  padding: 80px 5%;
+}
+.about-cta h2 { margin-bottom: 20px; }
+.cta-icon-main { font-size: 3rem; color: var(--accent-teal); margin-bottom: 15px; }
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-section { flex-direction: column; }
+  .about-hero h1 { font-size: 2rem; }
+  .vm-grid { flex-direction: column; }
+}

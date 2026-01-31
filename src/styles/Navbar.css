@@ -1,0 +1,125 @@
+/* Base Styles for Desktop (Mobile-first approach, desktop styles added with media queries) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #010714;
+  color: #22c55e;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%; /* If you want the logo image to be round */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a, .dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.nav-links a:hover, .dropdown-toggle:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+/* Hide hamburger icon on desktop */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* --- Responsive Styles --- */
+
+/* For Mobile and Tablets (Max width 768px) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  .nav-links {
+    display: none; /* Hide menu links by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex; /* Show menu links when open state is true */
+  }
+
+  .nav-links a, .dropdown-toggle {
+    text-align: left;
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+
+  .dropdown-menu {
+    position: static; /* Stack dropdown items vertically on mobile */
+    background-color: #555;
+    box-shadow: none;
+    padding-left: 20px; /* Indent submenu items */
+    width: 100%;
+  }
+}

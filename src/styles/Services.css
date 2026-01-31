@@ -1,0 +1,201 @@
+/* General Resets and Base Styles */
+:root {
+  --dark-blue: #020617; /* Main background color */
+  --card-bg: #0f172a;   /* Color for cards/boxes */
+  --accent-teal:#22c55e; /* Vibrant Teal Accent Color */
+  --text-light: #f8fafc; /* Light text color */
+  --text-gray: #94a3b8; /* Subtle gray text */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+section { padding: 80px 5%; }
+h1, h2, h3, h4, h5 { color: var(--text-light); }
+
+
+/* HERO */
+.services-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #1e293b 0%, var(--dark-blue) 100%);
+  border-bottom: 1px solid #1e293b;
+}
+/* ... Hero typography styles ... */
+
+
+/* SERVICES GRID & CARDS */
+.services-grid-section {
+  padding: 80px 5%;
+  background-color: var(--dark-blue);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex; /* Ensure consistent height */
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--accent-teal);
+  transform: translateY(-5px);
+  background-color: #1e293b;
+}
+/* ... Icon/H3/P styles ... */
+
+.tools-list-header {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-teal);
+    font-weight: bold;
+}
+
+.tools-icon {
+    margin-right: 10px;
+}
+
+.tools-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  flex-grow: 1; /* Pushes content down for consistent card height */
+}
+
+.tools-list li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+  color: var(--accent-teal);
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+/* WHY CHOOSE & TRUSTED BY */
+.why-choose {
+  padding: 80px 5%;
+  background-color: #0f172a;
+  border-top: 1px solid #1e293b;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: var(--text-gray);
+    gap: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+
+/* TESTIMONIALS SECTION (Responsive CSS Scroll Snap) */
+
+/* CTA SECTION */
+.cta-section {
+  padding: 100px 5%;
+  background-color: #0f172a;
+}
+
+.cta-box {
+  background: #0f172a;
+  padding: 60px;
+  border-radius: 15px;
+  text-align: center;
+}
+/* ... rest of CTA styles (buttons, icons) remain ... */
+/* Add this CSS to ../styles/Services.css */
+
+/* Define the Fade Animation Keyframes */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.95); /* Subtle scale effect */
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Testimonial Section Styling --- */
+.testimonial-section {
+    padding: 60px 20px;
+    background-color: #030303; 
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.testimonial-display-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Set a min-height to prevent the page from jumping when content changes */
+    min-height: 300px; 
+    position: relative;
+}
+
+/* Style for the individual testimonial card that animates in place */
+.testimonial-fade-card {
+    padding: 40px;
+    background: #0f172ad8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    /* Apply the animation to the element itself */
+    animation: fadeInOut 6s infinite; /* Matches the 6000ms interval in JS */
+}
+
+.testimonial-fade-card .quote {
+    font-size: 3rem;
+    color: #007BFF; /* Primary color */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.testimonial-fade-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #fffbfb;
+}
+
+.testimonial-fade-card h5 {
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.testimonial-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
