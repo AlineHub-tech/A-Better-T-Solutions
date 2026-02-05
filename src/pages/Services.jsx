@@ -76,7 +76,7 @@ export default function Services() {
       <section className="why-choose">
         <div className="why-content">
           <div className="industry-badge"><FaBuilding /> Trusted by Industry Leaders</div>
-          <h2>Why Choose A Better-T Solutions?</h2>
+          <h2>Why Choose TechFlow?</h2>
           <p>We blend expertise with client-focused solutions to deliver measurable results.</p>
           <div className="client-logos">
             <span>TechLink</span><span>BrandA</span><span>Kivu</span><span>SolutionX</span>
@@ -113,3 +113,4 @@ export default function Services() {
     </div>
   );
 }
+
