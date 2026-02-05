@@ -13,7 +13,7 @@ export default function About() {
       <section className="about-hero">
         <div className="hero-badge">Proven Excellence</div>
         <h1>
-          About <span>A Better-T Solutions</span>
+          About <span>TechFlow</span>
         </h1>
         <p>
           We are a creative & technology-driven company helping businesses
@@ -26,7 +26,7 @@ export default function About() {
         <div className="about-text">
           <h2>What Drives Us</h2>
           <p>
-            A Better-T Solutions is a Kigali-based creative agency specializing
+           TechFlow is a Kigali-based creative agency specializing
             in Graphic Design, Web Development, ICT Solutions, Microsoft Office
             services and Professional Photography. We also offer comprehensive Cyber Cafe services.
           </p>
@@ -129,3 +129,4 @@ export default function About() {
     </div>
   );
 }
+
