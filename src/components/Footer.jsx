@@ -11,7 +11,7 @@ export default function Footer(){
         
         {/* Company Info & Description */}
         <div className="footer-column">
-          <h3>TechFlow</h3>
+          <h3>ByteFlow</h3>
           <p>
             Leading digital solutions provider in Kigali, Rwanda. We turn your ideas into a strong digital presence.
           </p>
@@ -74,4 +74,5 @@ export default function Footer(){
     </footer>
   );
 }
+
 
