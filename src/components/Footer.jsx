@@ -11,7 +11,7 @@ export default function Footer(){
         
         {/* Company Info & Description */}
         <div className="footer-column">
-          <h3>A Better-T Solutions</h3>
+          <h3>TechFlow</h3>
           <p>
             Leading digital solutions provider in Kigali, Rwanda. We turn your ideas into a strong digital presence.
           </p>
@@ -64,7 +64,7 @@ export default function Footer(){
 
       {/* Footer Bottom / Copyright */}
       <div className="footer-bottom">
-<p className="footer-text">&copy; {currentYear} A Better-T Solutions. All Rights Reserved. | Developed by <a href="https://aline-site-seven.vercel.app/"><span class="developer-name">Umugwaneza Aline</span></a></p>
+<p className="footer-text">&copy; {currentYear} ByteFlow. All Rights Reserved. | Developed by <a href="https://aline-site-seven.vercel.app/"><span class="developer-name">Umugwaneza Aline</span></a></p>
         {/* Add privacy and terms links here */}
         <div className="footer-legal">
             <a href="#">Privacy Policy</a>
@@ -74,3 +74,4 @@ export default function Footer(){
     </footer>
   );
 }
+
