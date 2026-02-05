@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo-container">
         <img src={Logo} alt="A Better-T Solutions Logo" className="logo-img" />
-        <span className="logo-text">A Better-T Solutions</span>
+        <span className="logo-text">ByteFlow Rwanda</span>
       </div>
 
       {/* Hamburger Menu Icon for Mobile */}
@@ -49,3 +49,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
