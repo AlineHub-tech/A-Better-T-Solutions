@@ -1,0 +1,136 @@
+:root {
+  --gold: #c5a021;
+  --dark: #0f172a;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --text-gray: #4b5563;
+}
+
+.detail-page-wrapper {
+  background-color: var(--off-white);
+  padding: 120px 0 80px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-gray);
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.back-link:hover { color: var(--gold); }
+
+/* GRID LAYOUT */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* IMAGE SECTION */
+.detail-image-section .image-card {
+  position: relative;
+  background: var(--white);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.detail-image-section img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.category-tag-float {
+  position: absolute;
+  top: 30px; left: 30px;
+  background: var(--gold);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* INFO SECTION */
+.pro-badge { color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
+.detail-info-section h1 { font-size: 3rem; margin: 15px 0; color: var(--dark); font-weight: 800; }
+
+.price-container {
+  background: #fff4d1;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.price-container .value { font-size: 1.8rem; font-weight: 900; color: var(--gold); }
+
+.description-box h3 { font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+.description-box p { line-height: 1.7; color: var(--text-gray); margin-bottom: 25px; font-size: 1.05rem; }
+
+.benefit-list { list-style: none; margin-bottom: 40px; }
+.benefit-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--dark); }
+.benefit-list i { color: var(--gold); }
+
+/* BOOKING CARD */
+.booking-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.action-buttons { display: flex; gap: 15px; margin-top: 20px; }
+
+.whatsapp-btn {
+  background: var(--gold);
+  color: white;
+  flex: 2;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.call-btn {
+  background: var(--dark);
+  color: white;
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-info-section h1 { font-size: 2.2rem; }
+  .action-buttons { flex-direction: column; }
+}

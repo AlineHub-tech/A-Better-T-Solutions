@@ -1,125 +1,174 @@
-/* Base Styles for Desktop (Mobile-first approach, desktop styles added with media queries) */
-.navbar {
+:root {
+  --gold: #c5a021;
+  --white: #ffffff;
+  --dark: #111111;
+  --off-white: #f8f9fa;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. NAVBAR BASE - KUBUSA SCREEN KURENGA */
+.main-navbar {
+  background: var(--white);
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Ibi nibyo bikuraho kunyerera kw'urubuga */
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #010714;
-  color: #22c55e;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.logo-container {
+/* 2. LOGO RESPONSIVE (Ntoya kuri Mobile) */
+.logo-section {
   display: flex;
   align-items: center;
-}
-
-.logo-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 50%; /* If you want the logo image to be round */
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links a, .dropdown-toggle {
-  color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s;
-  cursor: pointer;
+  gap: 10px;
+  flex-shrink: 1; /* Bituma logo igabanuka aho gusunda hamburger icon */
 }
 
-.nav-links a:hover, .dropdown-toggle:hover {
-  background-color: #555;
-  border-radius: 4px;
+.nav-logo-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.logo-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--dark);
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+.brand-sub {
+  font-size: 0.6rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-top: -3px;
+  text-transform: uppercase;
+}
+
+/* 3. DESKTOP LINKS (Hisha kuri mobile) */
+.nav-items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.nav-items a:hover {
+  color: var(--gold);
 }
 
 .nav-icon {
-  margin-right: 8px;
+  color: var(--gold);
+  font-size: 1rem;
 }
 
-/* Dropdown Menu Styles */
-.dropdown {
-  position: relative;
+/* CONTACT BTN (Desktop) */
+.nav-contact-btn {
+  background: var(--gold);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(197, 160, 33, 0.2);
 }
 
-.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #444;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-width: 150px;
-  z-index: 1;
-  border-radius: 4px;
+.nav-contact-btn .nav-icon {
+  color: white;
 }
 
-.dropdown-menu a {
-  padding: 10px 15px;
-  white-space: nowrap;
-}
-
-.dropdown-menu a:hover {
-  background-color: #555;
-}
-
-/* Hide hamburger icon on desktop */
-.menu-icon {
+/* 4. MOBILE TOGGLE ICON */
+.mobile-icon {
   display: none;
+  font-size: 1.6rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  color: var(--dark);
+  z-index: 10001;
 }
 
-/* --- Responsive Styles --- */
-
-/* For Mobile and Tablets (Max width 768px) */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block; /* Show hamburger icon */
+/* 5. RESPONSIVE MOBILE MENU (THE FIX) */
+@media screen and (max-width: 1024px) {
+  .mobile-icon {
+    display: block;
   }
 
-  .nav-links {
-    display: none; /* Hide menu links by default */
+  /* Ibi bituma menu iza ivuye iburyo (Drawer) ikabuza kurenga screen */
+  .nav-items {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ibihishe hanze burundu */
+    width: 280px; /* Width ifatika (Fixed) */
+    max-width: 85%; /* Ntiyakwigera irenga screen width */
+    height: 100vh;
+    background: var(--white);
     flex-direction: column;
-    width: 100%;
-    background-color: #333;
-    position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
-    left: 0;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 100px 25px 40px;
+    transition: var(--transition);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    gap: 0;
+    z-index: 10000;
   }
 
-  .nav-links.open {
-    display: flex; /* Show menu links when open state is true */
+  .nav-items.active {
+    right: 0; /* Slide in neza */
   }
 
-  .nav-links a, .dropdown-toggle {
-    text-align: left;
-    padding: 12px 20px;
+  .nav-items li {
     width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in width */
+    border-bottom: 1px solid #f1f1f1;
   }
 
-  .dropdown-menu {
-    position: static; /* Stack dropdown items vertically on mobile */
-    background-color: #555;
-    box-shadow: none;
-    padding-left: 20px; /* Indent submenu items */
+  .nav-items li a {
+    font-size: 1.1rem;
+    padding: 18px 5px;
     width: 100%;
+  }
+
+  /* CONTACT BTN KURI MOBILE */
+  .nav-contact-btn {
+    background: var(--gold) !important;
+    margin-top: 30px;
+    width: 100% !important;
+    justify-content: center;
+    border-bottom: none !important;
+  }
+
+  /* Kugabanya Logo kuri phone nto cyane (iPhone SE) */
+  @media (max-width: 380px) {
+    .brand-name { font-size: 0.85rem; }
+    .nav-logo-img { width: 30px; height: 30px; }
   }
 }

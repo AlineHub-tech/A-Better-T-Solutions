@@ -1,105 +1,55 @@
-/* General Page Container */
-.page-container {
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: auto;
+/* NAVBAR RESPONSIVE */
+.main-navbar {
+  width: 100% !important;
+  overflow: hidden !important;
+  height: 70px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
-/* About Page Styling */
-.mv-section, .founder-section, .goals-principles-section {
-    margin-bottom: 40px;
+.nav-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 15px !important;
 }
 
-.founder-card {
-    text-align: center;
-    background-color: var(--gray-bg);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 300px;
-    margin: auto;
+.logo-section {
+  max-width: 70% !important; /* Birinda logo kurenga screen */
+  display: flex !important;
+  align-items: center !important;
 }
 
-.founder-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 3px solid var(--gold-orange);
-}
+.nav-logo-img { width: 35px !important; height: 35px !important; }
+.brand-name { font-size: 0.9rem !important; }
 
-.goals-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* MOBILE MENU DRAWER */
+@media screen and (max-width: 1024px) {
+  .nav-items {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important; /* Hide far away */
+    width: 280px !important; /* Use fixed pixels, NOT percentage */
+    max-width: 85% !important;
+    height: 100vh !important;
+    background: #fff !important;
+    flex-direction: column !important;
+    padding: 80px 20px !important;
+    transition: 0.4s ease-in-out !important;
+    z-index: 10000 !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
 
-.goal-card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-}
+  .nav-items.active {
+    right: 0 !important; /* Slide in correctly */
+  }
 
-/* Services Page Styling (Grid layout) */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  .nav-contact-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
 }
-
-.service-card-item {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border-bottom: 4px solid var(--dark-blue);
-}
-
-/* Contact Page Styling */
-.contact-container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.contact-form, .contact-details {
-    flex: 1;
-    min-width: 300px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--dark-blue);
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.map-placeholder {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
