@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-// 1. Hamagara styles.css hano kugira ngo ikwire hose (Global Styles)
-import './app.css'  
+
+// HINDURA HANO: Koresha path igera muri folder ya styles
+import './styles/styles.css' 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
