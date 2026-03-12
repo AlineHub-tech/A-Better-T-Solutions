@@ -1,108 +1,99 @@
-import React from 'react';
+import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane, FaWhatsapp } from "react-icons/fa";
 import "../styles/Contact.css";
-// Import Icons from react-icons/fa
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaStar, FaUsers, FaLightbulb, FaRocket, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaCheckCircle } from 'react-icons/fa';
-
 
 export default function Contact() {
   return (
-    <div className="contact-page">
-
-      {/* HERO / GET IN TOUCH */}
+    <div className="contact-page-wrapper">
+      {/* 1. HERO SECTION */}
       <section className="contact-hero">
-        <h1>
-          Get In <span>Touch</span>
-        </h1>
-        <p>
-          Let’s collaborate to transform your ideas into powerful digital solutions.
-        </p>
-      </section>
-
-      {/* CONTACT INFO (LOCATION, HOURS, PHONE, EMAIL) */}
-      <section className="contact-info-section">
-        <div className="info-grid">
-          <div className="info-card">
-            <FaPhone className="info-icon" />
-            <h3>Phone Number</h3>
-            <p>+250 796 023 452</p>
-          </div>
-
-          <div className="info-card">
-            <FaEnvelope className="info-icon" />
-            <h3>Email Address</h3>
-            <p>abettertomorrowf@gmail.com</p>
-          </div>
-
-          <div className="info-card">
-            <FaMapMarkerAlt className="info-icon" />
-            <h3>Office Location</h3>
-            <p>Batsinda, Kigali, Rwanda</p>
-          </div>
-
-          <div className="info-card">
-            <FaClock className="info-icon" />
-            <h3>Business Hours</h3>
-            <p>Mon – Sat | 8:30 AM – 9:00 PM</p>
-          </div>
+        <div className="container">
+          <span className="pro-tag">Get In Touch</span>
+          <h1>Let's Build Something <br /> <span className="gold-text">Great Together</span></h1>
+          <p>Have a project in mind or just want to say hi? We'd love to hear from you.</p>
         </div>
       </section>
 
-      {/* MAIN CONTENT: FORM AND WHY CHOOSE US SIDE-BY-SIDE */}
-      <section className="contact-main-content">
-        <div className="contact-form-container">
-          <h2>Send Us a Message</h2>
-          <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="text" placeholder="Service Needed" />
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit" className="submit-btn">Send Message</button>
-          </form>
-        </div>
-
-        <div className="contact-why-choose">
-          <h2>Why Choose Us</h2>
-          <ul>
-            <li><FaCheckCircle className="check-icon" /> Premium Quality & Modern Design</li>
-            <li><FaCheckCircle className="check-icon" /> Fast Delivery & Respect for Deadlines</li>
-            <li><FaCheckCircle className="check-icon" /> Client-Focused Approach</li>
-            <li><FaCheckCircle className="check-icon" /> Innovative & Creative Solutions</li>
-            <li><FaCheckCircle className="check-icon" /> Proven Excellence in the Market</li>
-          </ul>
+      {/* 2. CONTACT CONTENT */}
+      <section className="contact-content">
+        <div className="container grid-contact">
           
-          <h3>Connect With Us</h3>
-          <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook className="social-icon" /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter className="social-icon" /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin className="social-icon" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram className="social-icon" /></a>
+          {/* LEFT SIDE: INFO */}
+          <div className="contact-info-card">
+            <div className="info-item">
+              <div className="info-icon"><FaPhoneAlt /></div>
+              <div className="info-text">
+                <h4>Call Us</h4>
+                <p>+250 796 023 452</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon"><FaEnvelope /></div>
+              <div className="info-text">
+                <h4>Email Us</h4>
+                <p>abettertomorrowf@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon"><FaMapMarkerAlt /></div>
+              <div className="info-text">
+                <h4>Visit Us</h4>
+                <p>Kigali, Rwanda (Batsinda)</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon"><FaClock /></div>
+              <div className="info-text">
+                <h4>Working Hours</h4>
+                <p>Mon - Sat: 8:00 AM - 9:00 PM</p>
+              </div>
+            </div>
+
+            <div className="whatsapp-box">
+              <h4>Direct Chat</h4>
+              <p>For faster response, chat with our experts on WhatsApp.</p>
+              <a href="https://wa.me" className="btn-wa">
+                <FaWhatsapp /> Chat Now
+              </a>
+            </div>
           </div>
+
+          {/* RIGHT SIDE: FORM */}
+          <div className="contact-form-card">
+            <h3 className="form-title">Send Us a Message</h3>
+            <form className="pro-form">
+              <div className="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="e.g. John Doe" required />
+              </div>
+              <div className="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="example@mail.com" required />
+              </div>
+              <div className="form-group">
+                <label>Subject</label>
+                <select>
+                  <option>Graphic Design</option>
+                  <option>Web Development</option>
+                  <option>Store Inquiry</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label>Your Message</label>
+                <textarea rows="5" placeholder="How can we help you?"></textarea>
+              </div>
+              <button type="submit" className="btn-submit">
+                Send Message <FaPaperPlane />
+              </button>
+            </form>
+          </div>
+
         </div>
       </section>
-
-      {/* MAP */}
-      <section className="contact-map-section">
-        <h2>Our Location on Map</h2>
-        <iframe
-          title="map"
-          src="https://www.google.com/maps?q=Batsinda,+Kigali,+Rwanda&output=embed"
-          width="100%"
-          height="450px"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </section>
-
-      {/* CTA: READY TO START YOUR JOURNEY? */}
-      <section className="contact-cta">
-        <FaRocket className="cta-icon-main" />
-        <h2>Ready to Start Your Journey?</h2>
-        <p>Let's collaborate to transform your ideas into powerful digital solutions that drive measurable results and accelerate your business growth.</p>
-        <a href="https://wa.me/250796023452" className="cta-btn">
-          Chat on WhatsApp Now
-        </a>
-      </section>
-
     </div>
   );
 }

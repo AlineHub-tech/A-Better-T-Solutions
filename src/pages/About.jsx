@@ -1,133 +1,103 @@
-import { useEffect, useState } from "react";
-import profile from "../assets/profile.png";
-// Import Icons from react-icons
+import React from "react";
+// Twahinduye FaTarget tuyigira FaBullseye kuko ariyo iri muri library
+import { FaEye, FaBullseye, FaGem, FaAward, FaUsers, FaLightbulb } from "react-icons/fa";
 import "../styles/About.css";
-import { FaStar, FaClock, FaUsers, FaLightbulb, FaPalette, FaCode, FaCamera, FaFileWord, FaPrint, FaChartLine, FaDesktop, FaIdCard, FaHandsHelping, FaEye, FaBullseye, FaRocket, FaCheckCircle } from 'react-icons/fa';
-
 
 export default function About() {
   return (
-    <div className="about-page">
-
-      {/* HERO / PROVEN EXCELLENCE */}
+    <div className="about-page-wrapper">
+      {/* 1. HERO SECTION */}
       <section className="about-hero">
-        <div className="hero-badge">Proven Excellence</div>
-        <h1>
-          About <span>ByteFlow</span>
-        </h1>
-        <p>
-          We are a creative & technology-driven company helping businesses
-          and individuals build strong digital presence.
-        </p>
-      </section>
-
-      {/* WHO WE ARE / WHAT DRIVES US */}
-      <section className="about-section">
-        <div className="about-text">
-          <h2>What Drives Us</h2>
-          <p>
-          ByteFlow is a Kigali-based creative agency specializing
-            in Graphic Design, Web Development, ICT Solutions, Microsoft Office
-            services and Professional Photography. We also offer comprehensive Cyber Cafe services.
-          </p>
-          <p>
-            We focus on delivering high-quality, modern and impactful digital
-            solutions that help our clients grow, attract customers and stand
-            out in a competitive market.
+        <div className="container">
+          <span className="pro-tag">Our Story</span>
+          <h1>Empowering Businesses Through <br /> <span className="gold-text">Creative Innovation</span></h1>
+          <p className="hero-p">
+            A Better-T Solutions is a leading digital agency in Kigali, dedicated to 
+            transforming ideas into powerful digital experiences.
           </p>
         </div>
+      </section>
 
-        <div className="about-image">
-          <img src={profile} alt="Founder Umugwaneza Aline" />
-          <div className="founder-info">
-            <h3>Founder: Umugwaneza Aline</h3>
+      {/* 2. INTRO / WHO WE ARE */}
+      <section className="who-we-are">
+        <div className="container grid-2">
+          <div className="intro-image">
+            <div className="experience-badge">
+              <h2>5+</h2>
+              <p>Years of Excellence</p>
+            </div>
+          </div>
+          <div className="intro-text">
+            <span className="pro-tag">Who We Are</span>
+            <h2>Your Partner in Digital <br /> Transformation</h2>
             <p>
-              Email: 
-              <a href="mailto:umugwanezaaline@77gmail.com"> 
-                umugwanezaaline@77gmail.com
-              </a>
+              Founded with a passion for excellence, we have grown into a multi-disciplinary 
+              agency specializing in Graphic Design, Web Development, and ICT Consulting. 
+              We don't just provide services; we build long-term partnerships that drive growth.
+            </p>
+            <div className="mini-stats">
+              <div className="stat-item"><h4>100%</h4> <p>Satisfaction</p></div>
+              <div className="stat-item"><h4>500+</h4> <p>Projects Done</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. VISION & MISSION */}
+      <section className="vision-mission">
+        <div className="container grid-2">
+          <div className="vm-card">
+            <div className="vm-icon"><FaBullseye /></div>
+            <h3>Our Mission</h3>
+            <p>
+              To provide world-class digital and creative solutions that empower 
+              entrepreneurs and organizations to reach their full potential through 
+              innovation and quality craftsmanship.
+            </p>
+          </div>
+          <div className="vm-card">
+            <div className="vm-icon"><FaEye /></div>
+            <h3>Our Vision</h3>
+            <p>
+              To be the leading digital transformation hub in Africa, recognized 
+              for excellence, integrity, and the ability to turn complex challenges 
+              into simple, elegant digital solutions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* BUILT ON PURPOSE (VISION & MISSION) */}
-      <section className="vision-mission">
-        <h2>Built on Purpose</h2>
-        <div className="vm-grid">
-            <div className="vm-card">
-                <FaEye className="vm-icon"/>
-                <h3>Our Vision</h3>
-                <p>To be the leading digital solutions provider in East Africa, recognized for innovation and excellence in service delivery.</p>
+      {/* 4. CORE VALUES */}
+      <section className="core-values">
+        <div className="container">
+          <div className="section-header-center">
+            <span className="pro-tag">Our Values</span>
+            <h2>What We Stand For</h2>
+          </div>
+          <div className="values-grid">
+            <div className="value-item">
+              <FaGem className="gold-icon" />
+              <h4>Quality</h4>
+              <p>We never compromise. Every pixel and line of code is crafted to perfection.</p>
             </div>
-            <div className="vm-card">
-                <FaBullseye className="vm-icon"/>
-                <h3>Our Mission</h3>
-                <p>To empower local businesses with cutting-edge technology and creative strategies that ensure sustainable growth and global competitiveness.</p>
+            <div className="value-item">
+              <FaLightbulb className="gold-icon" />
+              <h4>Innovation</h4>
+              <p>We embrace new technologies to keep your business ahead of the competition.</p>
             </div>
-        </div>
-      </section>
-
-
-      {/* WHY CHOOSE US */}
-      <section className="why-us">
-        <h2>Why Choose Us</h2>
-
-        <div className="why-grid">
-          <div className="why-card">
-            <FaStar className="why-icon"/>
-            <h3>Premium Quality</h3>
-            <p>We deliver professional, clean and modern designs.</p>
-          </div>
-
-          <div className="why-card">
-            <FaClock className="why-icon"/>
-            <h3>Fast Delivery</h3>
-            <p>We respect deadlines and deliver on time.</p>
-          </div>
-
-          <div className="why-card">
-            <FaUsers className="why-icon"/>
-            <h3>Client Focused</h3>
-            <p>Your satisfaction is our top priority.</p>
-          </div>
-
-          <div className="why-card">
-            <FaLightbulb className="why-icon"/>
-            <h3>Creative Ideas</h3>
-            <p>We bring innovative and creative solutions.</p>
+            <div className="value-item">
+              <FaAward className="gold-icon" />
+              <h4>Integrity</h4>
+              <p>Transparency and honesty are the foundations of every relationship we build.</p>
+            </div>
+            <div className="value-item">
+              <FaUsers className="gold-icon" />
+              <h4>Collaboration</h4>
+              <p>Your vision is our priority. We work closely with you to achieve your goals.</p>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* OUR EXPERTISE (SERVICES SUMMARY) */}
-      <section className="about-services">
-        <h2>Our Expertise</h2>
-
-        <div className="about-service-grid">
-          <div><FaPalette /> Graphic Design</div>
-          <div><FaCode /> Web Development</div>
-          <div><FaCamera /> Photography</div>
-          <div><FaFileWord /> Microsoft Office</div>
-          <div><FaPrint /> Printing Services</div>
-          <div><FaChartLine /> ICT Solutions</div>
-          <div><FaDesktop /> Cyber Cafe Services</div> 
-          <div><FaIdCard /> NIDA Services (IDs)</div> 
-        </div>
-      </section>
-
-      {/* CTA: Ready to Transform Your Vision? */}
-      <section className="about-cta">
-        <FaRocket className="cta-icon-main" />
-        <h2>Ready to Transform Your Vision?</h2>
-        <p>Let's collaborate to transform your ideas into powerful digital solutions that drive measurable results and accelerate your business growth.</p>
-        <a href="https://wa.me" className="cta-btn">
-          Contact Us Now
-        </a>
-      </section>
-
     </div>
   );
 }
-
-

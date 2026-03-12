@@ -1,113 +1,114 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import "../styles/Services.css"
-import { 
-  FaPalette, FaCode, FaLaptopCode, FaVideo, 
-  FaCamera, FaBullhorn, FaWifi, FaCheckCircle, 
-  FaQuoteLeft, FaRocket, FaBuilding, FaTools
-} from 'react-icons/fa';
-
-// ... (services data remains the same)
-const services = [
-  { title: "Graphic Design", icon: <FaPalette />, desc: "Professional logos, flyers, and branding solutions that capture your brand essence.", tools: ["Photoshop", "Illustrator", "InDesign"] },
-  { title: "Website Development", icon: <FaCode />, desc: "Building high-performance, responsive websites tailored to your business needs.", tools: ["React", "Node.js", "WordPress"] },
-  { title: "ICT Consulting", icon: <FaLaptopCode />, desc: "Expert advice on IT infrastructure, networking, and digital strategy.", tools: ["Cisco", "Security Audits"] },
-  { title: "Videography", icon: <FaVideo />, desc: "Professional video production and editing for commercials and events.", tools: ["Premiere Pro", "After Effects"] },
-  { title: "Photography", icon: <FaCamera />, desc: "Professional photography for products, corporate events, and personal branding.", tools: ["DSLR", "Lighting", "Retouching"] },
-  { title: "Content Creation", icon: <FaBullhorn />, desc: "Engaging digital content to grow your audience and increase engagement.", tools: ["SEO", "Copywriting", "Social Media"] },
-  { title: "Cyber Cafe Internet", icon: <FaWifi />, desc: "Reliable, high-speed internet services and business center support.", tools: ["High Speed", "Secure PCs"] }
-];
-
-const testimonialsData = [
-  { id: 1, name: "Jean Paul", title: "CEO of TechLink", quote: "The web development team exceeded my expectations. Professional and fast!" },
-  { id: 2, name: "Alice M.", title: "Marketing Manager", quote: "Their graphic design work gave our brand a new life. Amazing creativity!" },
-  { id: 3, name: "David K.", title: "Operations Director", quote: "Best ICT consulting in Kigali. They fixed our network issues permanently." },
-  { id: 4, name: "Fanny U.", title: "Startup Founder", quote: "A better T solutions provided excellent branding support for our new venture!" },
-];
-
+import React from "react";
+import { Link } from "react-router-dom";
+import servicesData from "../data/Data";
+import { FaCheckCircle, FaStar, FaQuoteLeft, FaRocket, FaShieldAlt, FaUsers, FaArrowRight } from "react-icons/fa";
+import "../styles/Services.css";
 
 export default function Services() {
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const currentTestimonial = testimonialsData[currentTestimonialIndex];
-
-  // Auto slide functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonialIndex(prevIndex => 
-        (prevIndex + 1) % testimonialsData.length
-      );
-    }, 6000); // Change every 6 seconds
-    return () => clearInterval(interval);
-  }, []);
-
+  const testimonials = [
+    { name: "Jean Paul", role: "CEO, TechRwanda", text: "A Better-T Solutions transformed our brand identity. Their web development team is top-notch!" },
+    { name: "Aline Marie", role: "Manager, Fashion Hub", text: "The graphic designs they provided for our marketing campaign were world-class. Highly recommend!" },
+    { name: "David K.", role: "Founder, Kigali Logistics", text: "Professional, fast, and reliable. They are the best ICT partners we've ever worked with." }
+  ];
 
   return (
-    <div className="services-container">
-      {/* HERO SECTION ... */}
-      <header className="services-hero">
-        <div className="hero-badge">OUR SERVICES</div>
-        <h1>Transforming businesses through <span>Innovative Technology</span></h1>
-        <p>Expert development, creative design, and strategic digital transformation services trusted by industry leaders.</p>
-      </header>
+    <div className="services-page-wrapper">
+      {/* 1. HERO SECTION */}
+      <section className="services-hero">
+        <div className="container">
+          <span className="pro-tag">Our Expertise</span>
+          <h1>Innovative Solutions for <br /><span className="gold-text">Modern Businesses</span></h1>
+          <p>We provide a comprehensive suite of digital and creative services designed to propel your brand to the next level.</p>
+        </div>
+      </section>
 
-      {/* SERVICES GRID SECTION ... */}
-      <section className="services-grid-section">
-        <div className="services-grid">
-          {services.map((s, i) => (
-            <div key={i} className="service-card">
-              <div className="card-icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-              <div className="tools-list-header">
-                <FaTools className="tools-icon" />
-                <span>Tools We Use:</span>
+      {/* 2. ALL SERVICES GRID (From Data.js) */}
+      <section className="all-services-list">
+        <div className="container">
+          {servicesData.map((group, i) => (
+            <div key={i} className="service-group-v2">
+              <div className="group-header">
+                <h2>{group.category}</h2>
+                <div className="title-bar"></div>
               </div>
-              <ul className="tools-list">
-                {s.tools.map((tool, index) => (
-                    <li key={index}><FaCheckCircle className="check" /> {tool}</li>
+              <div className="services-grid-v2">
+                {group.items.map((item, j) => (
+                  <Link to={`/services/${encodeURIComponent(item.title)}`} className="service-item-card" key={j}>
+                    <div className="icon-circle"><FaCheckCircle /></div>
+                    <h4>{item.title}</h4>
+                    <p>Premium quality {item.title} services tailored for excellence.</p>
+                    <span className="learn-more">Learn More <FaArrowRight /></span>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* WHY CHOOSE US & INDUSTRY LEADERS */}
-      <section className="why-choose">
-        <div className="why-content">
-          <div className="industry-badge"><FaBuilding /> Trusted by Industry Leaders</div>
-          <h2>Why Choose A Better-T Solutions?</h2>
-          <p>We blend expertise with client-focused solutions to deliver measurable results.</p>
-          <div className="client-logos">
-            <span>TechLink</span><span>BrandA</span><span>Kivu</span><span>SolutionX</span>
+      {/* 3. WHY CHOOSE US SECTION */}
+      <section className="why-choose-v2">
+        <div className="container">
+          <div className="choose-content">
+            <div className="choose-text">
+              <span className="pro-tag">Why Better-T?</span>
+              <h2>Why Hundreds of Clients <br />Trust Our Agency</h2>
+              <div className="choose-grid">
+                <div className="choose-item">
+                  <FaRocket className="gold-icon" />
+                  <div>
+                    <h4>Fast & Scalable</h4>
+                    <p>We deliver high-performance results that grow with your business.</p>
+                  </div>
+                </div>
+                <div className="choose-item">
+                  <FaShieldAlt className="gold-icon" />
+                  <div>
+                    <h4>Secure & Reliable</h4>
+                    <p>Your data and brand security are our top priorities.</p>
+                  </div>
+                </div>
+                <div className="choose-item">
+                  <FaUsers className="gold-icon" />
+                  <div>
+                    <h4>Expert Team</h4>
+                    <p>Work with the most talented designers and developers in Kigali.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="choose-image">
+               <div className="experience-box">
+                  <h3>5+</h3>
+                  <p>Years of Excellence</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>
 
-
-      {/* TESTIMONIAL SLIDER (FADE ANIMATION) */}
-      <section className="testimonial-section">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonial-display-wrapper">
-          
-          {/* We only render the current testimonial, and CSS handles the fade */}
-          <div key={currentTestimonial.id} className="testimonial-fade-card">
-              <FaQuoteLeft className="quote" />
-              <p>"{currentTestimonial.quote}"</p>
-              <h5>{currentTestimonial.name}</h5>
-              <p className="testimonial-title">{currentTestimonial.title}</p>
+      {/* 4. TESTIMONIALS SECTION */}
+      <section className="testimonials-v2">
+        <div className="container">
+          <div className="section-header-center">
+            <span className="pro-tag">Testimonials</span>
+            <h2>What Our Clients Say</h2>
           </div>
-
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="cta-section">
-        <div className="cta-box">
-          <FaRocket className="rocket-icon" />
-          <h2>Ready to Transform Your Vision?</h2>
-          <p>Let's build something amazing together. Contact us today.</p>
-          <a href="https://wa.me" className="cta-btn">Get Started Now</a>
+          <div className="testimonial-grid">
+            {testimonials.map((t, k) => (
+              <div className="testi-card" key={k}>
+                <FaQuoteLeft className="quote-icon" />
+                <p className="testi-text">{t.text}</p>
+                <div className="testi-user">
+                  <div className="user-stars">
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                  </div>
+                  <h4>{t.name}</h4>
+                  <span>{t.role}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
