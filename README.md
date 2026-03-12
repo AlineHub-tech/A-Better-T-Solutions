@@ -12,12 +12,9 @@
 https://a-better-t-solutions.vercel.app
 
 📸ScreenShoot
-
-![1](https://github.com/user-attachments/assets/adf5808f-4d71-454c-937e-054730481546)
-![6](https://github.com/user-attachments/assets/b90c3f0d-5575-4ff9-86b7-6c05d6dfc2db)
-![4](https://github.com/user-attachments/assets/0d734040-106c-45d7-9c05-49eb4d927420)
-![3](https://github.com/user-attachments/assets/19ae74a9-d7e5-4fd7-a390-b24609273631)
-![7](https://github.com/user-attachments/assets/5d710a46-0ca3-4932-8263-08a94815dbc6)
+<img width="1348" height="634" alt="t1" src="https://github.com/user-attachments/assets/999b49f4-23a2-4b09-954f-8aea33de5d67" />
+<img width="1349" height="626" alt="t2" src="https://github.com/user-attachments/assets/11aba376-e1c3-4d55-bc22-980aa828425d" />
+<img width="1353" height="635" alt="t3" src="https://github.com/user-attachments/assets/f898147d-f090-4aa6-bccd-c80d0869ef1e" />
 
 A **modern, premium, and responsive IT & Creative Solutions website**
  designed to help businesses, startups, and individuals access professional digital services easily.
