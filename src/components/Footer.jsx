@@ -1,74 +1,86 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Assuming you use React Router
+import { Link } from "react-router-dom";
+import { 
+  FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub, 
+  FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaPaperPlane 
+} from "react-icons/fa";
 import "../styles/Footer.css";
 
-export default function Footer(){
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  return(
-    <footer className="site-footer">
-      <div className="content-section footer-content">
-        
-        {/* Company Info & Description */}
-        <div className="footer-column">
-          <h3>A Better-T Solutions</h3>
-          <p>
-            Leading digital solutions provider in Kigali, Rwanda. We turn your ideas into a strong digital presence.
+  return (
+    <footer className="main-footer">
+      <div className="footer-container">
+        {/* 1. COMPANY INFO */}
+        <div className="footer-section brand-info">
+          <h2 className="footer-logo">A BETTER-T <span>SOLUTIONS</span></h2>
+          <p className="footer-desc">
+            Leading digital agency in Kigali. We specialize in Graphic Design, 
+            Web Development, and Branding solutions to grow your business.
           </p>
-          <div className="socials">
-            <a href="https://www.facebook.com/share/15erRQdApJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/better_t_solutions?igsh=cDR5aHVnbXhjY2dp" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/umugwaneza-aline-655146325" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-             <a href="https://github.com/AlineHub-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i className="fab fa-github"></i>
-            </a>
+          <div className="social-grid">
+            <a href="https://www.facebook.com/share/1CGmESiTA3/" target="_blank" className="social-box"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/a_li_ne97?igsh=dGs5MXVnbnpsbzIz" target="_blank" className="social-box"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/umugwaneza-aline-655146325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className="social-box"><FaLinkedinIn /></a>
+            <a href="https://github.com/AlineHub-tech" target="_blank" className="social-box"><FaGithub /></a>
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-column">
-          <h3>Quick Links</h3>
+        {/* 2. QUICK LINKS */}
+        <div className="footer-section links">
+          <h3 className="section-title">Quick Links</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/store">Our Store</Link></li>
+            <li><Link to="/services">Services</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/">Services</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
-        {/* Contact Us */}
-        <div className="footer-column">
-          <h3>Contact Us</h3>
-          <p><i className="fas fa-map-marker-alt"></i>Kigali, Rwanda (Batsinda)</p>
-          <p><i className="fas fa-phone"></i> +250 796 023 452</p>
-          <p><i className="fas fa-envelope"></i> abettertomorrowf@gmail.com</p>
-          <p><i className="fas fa-clock"></i> Mon-Sat: 8am - 9pm</p>
+        {/* 3. CONTACT INFO */}
+        <div className="footer-section contact">
+          <h3 className="section-title">Reach Us</h3>
+          <div className="contact-item">
+            <FaMapMarkerAlt className="gold-icon" />
+            <span>Kigali, Rwanda (Batsinda)</span>
+          </div>
+          <div className="contact-item">
+            <FaPhoneAlt className="gold-icon" />
+            <span>+250 796 023 452</span>
+          </div>
+          <div className="contact-item">
+            <FaEnvelope className="gold-icon" />
+            <span>abettertomorrowf@gmail.com</span>
+          </div>
+          <div className="contact-item">
+            <FaClock className="gold-icon" />
+            <span>Mon-Sat: 8am - 9pm</span>
+          </div>
         </div>
 
-        {/* Newsletter Subscription */}
-        <div className="footer-column">
-          <h3>Newsletter</h3>
-          <p>Subscribe to our newsletter to get the latest updates and offers.</p>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Your Email Address" required />
-            <button type="submit">Subscribe</button>
+        {/* 4. NEWSLETTER */}
+        <div className="footer-section newsletter">
+          <h3 className="section-title">Newsletter</h3>
+          <p>Join our community to get the latest tech updates.</p>
+          <form className="sub-form">
+            <input type="email" placeholder="Email Address" required />
+            <button type="submit"><FaPaperPlane /></button>
           </form>
         </div>
       </div>
 
-      {/* Footer Bottom / Copyright */}
+      {/* FOOTER BOTTOM */}
       <div className="footer-bottom">
-<p className="footer-text">&copy; {currentYear} A Better-T Solutions. All Rights Reserved. | Developed by <a href="https://aline-site-seven.vercel.app/"><span class="developer-name">Umugwaneza Aline</span></a></p>
-        {/* Add privacy and terms links here */}
-        <div className="footer-legal">
+        <div className="bottom-content">
+          <p>&copy; {currentYear} <span>A Better-T Solutions</span>. All Rights Reserved.</p>
+          <p className="dev-credit">Developed by <a href="https://byte-flow-ltd.vercel.app/">ByteFlow</a></p>
+          <div className="legal-links">
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <span className="dot">•</span>
+            <a href="#">Terms of Use</a>
+          </div>
         </div>
       </div>
     </footer>
